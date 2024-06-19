@@ -2818,7 +2818,7 @@ lib.escapeShellArgs (lib.concatMap (ext: [ "--ghc-opt" "-X${ext}" ]) hooks.ormol
         {
           name = "nixfmt";
           description = "Nix code prettifier.";
-          package = tools.nixfmt;
+          package = tools.nixfmt-rfc-style;
           entry = "${hooks.nixfmt.package}/bin/nixfmt ${lib.optionalString (hooks.nixfmt.settings.width != null) "--width=${toString hooks.nixfmt.settings.width}"}";
           files = "\\.nix$";
         };
