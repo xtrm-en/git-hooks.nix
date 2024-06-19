@@ -43,7 +43,7 @@
 , mdl
 , mdsh
 , nil
-, nixfmt
+, nixfmt-rfc-style
 , nixpkgs-fmt
 , nodePackages
 , ocamlPackages
@@ -126,7 +126,7 @@ in
     mdl
     mdsh
     nil
-    nixfmt
+    nixfmt-rfc-style
     nixpkgs-fmt
     ormolu
     pre-commit-hook-ensure-sops
