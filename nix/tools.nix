@@ -6,6 +6,7 @@
 , ansible-lint
 , biome
 , cabal-fmt
+, cabal-gild
 , cabal2nix
 , callPackage
 , cargo
@@ -53,8 +54,10 @@
 , poetry
 , pre-commit-hook-ensure-sops ? null
 , python3Packages
+, pyright ? nodePackages.pyright
 , php82Packages
 , ripsecrets ? null
+, reuse
 , ruff ? null
 , rustfmt
 , shellcheck
@@ -71,6 +74,7 @@
 , treefmt
 , typos
 , typstfmt
+, typstyle ? null ## Add in nixpkgs added on commit 800ca60
 , zprint
 , yamlfmt
 , yamllint
@@ -96,6 +100,7 @@ in
     biome
     cabal2nix
     cabal-fmt
+    cabal-gild
     cargo
     clang-tools
     clippy
@@ -131,6 +136,8 @@ in
     ormolu
     pre-commit-hook-ensure-sops
     poetry
+    pyright
+    reuse
     revive
     ripsecrets
     ruff
@@ -146,6 +153,7 @@ in
     treefmt
     typos
     typstfmt
+    typstyle
     vale
     yamlfmt
     yamllint
@@ -155,7 +163,7 @@ in
   # TODO: these two should be statically compiled
   inherit (haskellPackages) fourmolu;
   inherit (luaPackages) luacheck;
-  inherit (nodePackages) eslint markdownlint-cli prettier pyright cspell;
+  inherit (nodePackages) eslint markdownlint-cli prettier cspell;
   inherit (ocamlPackages) ocp-indent;
   inherit (python3Packages) autoflake black flake8 flynt isort mkdocs-linkcheck mypy pre-commit-hooks pylint pyupgrade;
   inherit (php82Packages) php-cs-fixer psalm;

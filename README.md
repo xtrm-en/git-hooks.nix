@@ -297,7 +297,7 @@ clang-format supports.
 
 ### Terraform
 
-- `terraform-format`: built-in formatter
+- `terraform-format`: built-in formatter (using [OpenTofu](https://opentofu.org/)'s [`fmt`](https://opentofu.org/docs/cli/commands/fmt/))
 - [tflint](https://github.com/terraform-linters/tflint)
 
 ### YAML
@@ -320,6 +320,7 @@ clang-format supports.
 ### Typst
 
 - [typstfmt](https://github.com/astrale-sharp/typstfmt)
+- [typstyle](https://github.com/Enter-tainer/typstyle)
 
 ### Fortran
 
